@@ -1,0 +1,17 @@
+changeDate3/19/2020 10:40:50 AM
+taskName: Fitts Touching Experiment
+touchTime: 3
+timeOut: 10
+breakTime: 2
+circlePosition:
+- 3
+- 3
+- 3
+- -3
+- 3.5
+circleSize:
+- 1.1
+- 1.20000005
+- 1.2
+- 0.9
+- 1.2
