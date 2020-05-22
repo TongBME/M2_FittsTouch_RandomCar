@@ -171,7 +171,7 @@ public class StateFunc: MonoBehaviour {
             //SaveCsv.SaveData(System.Environment.CurrentDirectory + "\\FittsTouchingEXP\\" + GlobalVar.FILENAME + "1.csv",
             //timeSequence, trialNum, taskState, postitionX, postitionY);
 
-            string csvfullfilename = System.Environment.CurrentDirectory + "\\FittsTouchingEXP\\" + GlobalVar.FILENAME + "1.csv";
+            string csvfullfilename = System.Environment.CurrentDirectory + "\\FittsTouchingEXP\\" + GlobalVar.FILENAME + ".csv";
 
             File.WriteAllText(csvfullfilename, "Time,Trial,State,PositionX,PositionY\n");
             File.AppendAllText(csvfullfilename, csvContent.ToString());

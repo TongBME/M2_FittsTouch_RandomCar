@@ -8,13 +8,11 @@ public class InitSetting : MonoBehaviour {
 
 
     private Vector2 screenSize;
-    //public static float[] M2_AXIS_X = new float[] { -0.022f, 0.551f };
-    //public static float[] M2_AXIS_X = new float[] { -0.286f, 0.288f };
+    public static float[] M2_AXIS_X = new float[] { -0.022f, 0.551f };
+    public static float[] M2_AXIS_Y = new float[] { -0.286f, 0.288f }; // 傅利叶公司
 
-    //public static float[] M2_AXIS_Y = new float[] { 0.02f, 0.2417f }; // 瑞康
-
-    public static float[] M2_AXIS_X = new float[] { -0.009f, 0.564f };
-    public static float[] M2_AXIS_Y = new float[] { 0.0001f, 0.541f }; // 瑞金
+    //public static float[] M2_AXIS_X = new float[] { -0.009f, 0.564f };
+    //public static float[] M2_AXIS_Y = new float[] { 0.0001f, 0.541f }; // 瑞金
 
     public static float xOffset;
     public static float yOffset;
@@ -23,7 +21,6 @@ public class InitSetting : MonoBehaviour {
 // Use this for initialization
 void Start()
     {
-        //DynaLinkHS.CmdTransparentControl(0f, 0f, 10f, 10f, 1f, 1f, 0f, 0f);
         DynaLinkHS.CmdTransparentControl(5f, 5f, 10f, 10f, 10f, 10f, 10f, 10f);
         //DynaLinkHS.CmdServoOff();
 

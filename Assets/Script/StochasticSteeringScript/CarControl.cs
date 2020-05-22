@@ -11,8 +11,7 @@ using FFTAICommunicationLib;
 public class CarControl : MonoBehaviour
 {
     static List<string> mWriteTxt = new List<string>();
-    private static string outPath = @"E:\Fourier\";
-    private static string csvFileName = "tong";
+    private static string csvFileName = "car_controlling";
     public StringBuilder csvContent;
 
     public Text timeText;
@@ -143,8 +142,7 @@ public class CarControl : MonoBehaviour
 
     void WriteToFile()
     {
-        string csvfullfilename = outPath + csvFileName + ".csv";
-        Debug.Log(csvfullfilename);
+        string csvfullfilename = System.Environment.CurrentDirectory + "\\StotisticSteeringEXP\\" + csvFileName + ".csv";
         File.WriteAllText(csvfullfilename, "JoystickX,PositionX, Besier\n");
         File.AppendAllText(csvfullfilename, csvContent.ToString());
     }

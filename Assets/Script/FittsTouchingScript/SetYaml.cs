@@ -52,7 +52,7 @@ public class SetYaml : MonoBehaviour
         var fittsYaml = serializer.Serialize(fittsData);
         Debug.LogFormat("new serialization was created in .yaml file:\n{0}", fittsYaml);
         // save .yaml
-        string TextName = System.Environment.CurrentDirectory + "\\reaching-exp\\" + GlobalVar.YAMLNAME + ".yaml";
+        string TextName = System.Environment.CurrentDirectory + "\\FittsTouchingEXP\\" + GlobalVar.YAMLNAME + ".yaml";
         using (TextWriter writer = File.CreateText(TextName))
         {
             writer.Write(fittsYaml.ToString());
@@ -62,7 +62,7 @@ public class SetYaml : MonoBehaviour
     public static void LoadTaskInfo()
     {
         // read
-        string yamlName = System.Environment.CurrentDirectory + "\\reaching-exp\\" + GlobalVar.YAMLNAME + ".yaml";
+        string yamlName = System.Environment.CurrentDirectory + "\\FittsTouchingEXP\\" + GlobalVar.YAMLNAME + ".yaml";
         string content = File.ReadAllText(yamlName);
         var input = new StringReader(content);
         var deserializer = new DeserializerBuilder().Build();

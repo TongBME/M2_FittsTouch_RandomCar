@@ -10,7 +10,6 @@ using System.Timers;
 public class MainSysPanel : MonoBehaviour {
 
     public MainSysPanel MainPanel;
-    public SpasticityTestPanelManager SpasticityTestPanel;  // For spasticity test
 
     public UpgradePanelManager UpgradePanelManager;
 
@@ -20,7 +19,6 @@ public class MainSysPanel : MonoBehaviour {
     public Button ConnectNetBtn;
     public Button DisConnectNetBtn;
 
-    public Button SpasticityTestBtn;
     public Button CarGameBtn;
     public Button TouchingGameBtn;
 
@@ -32,7 +30,6 @@ public class MainSysPanel : MonoBehaviour {
     {
         ConnectNetBtn.onClick.AddListener(ConnectNetBtnClick);
         DisConnectNetBtn.onClick.AddListener(DisConnectNetBtnClick);
-        SpasticityTestBtn.onClick.AddListener(OnSpasticityTestBtnClick);
         CarGameBtn.onClick.AddListener(OnCarGameBtnClick);
         TouchingGameBtn.onClick.AddListener(OnFittsTouchingBtnClick);
     }
@@ -52,15 +49,7 @@ public class MainSysPanel : MonoBehaviour {
     {
         DynaLinkCore.StopSocket();
     }
-
-
-    //Wenhao: for spasticity test
-    void OnSpasticityTestBtnClick()
-    {
-        SpasticityTestPanel.gameObject.SetActive(true);
-        MainPanel.gameObject.SetActive(false);
-    }
-
+   
 
     private void OnCarGameBtnClick()
     {
